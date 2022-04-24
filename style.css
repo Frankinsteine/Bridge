@@ -1,0 +1,108 @@
+.boat{
+    position: absolute;
+    z-index: 5;
+}
+
+#id_clock{
+    margin-top: 8vh;
+    position: absolute;
+    left: 50%;
+    margin-left: -3vw;
+    width: 4.5vw;
+    text-align: center;
+    font-size: 2.0vw;
+    color: blueviolet;
+    border:2px solid #e1d4ae; 
+    background:#e8e3d4;
+    padding:0.3vw 1vw;
+    display: none;
+    z-index: 5;
+}
+
+.container{
+    position: absolute;
+    z-index: 10;
+}
+
+#background {
+    z-index: 1;
+}
+
+html, body{
+    margin: 0;
+    padding: 0;
+  }
+canvas{
+    display: block;
+    image-rendering: auto;
+}
+  
+
+.notification {
+    margin-top: 5%;
+    width: 600px;
+    height: auto;
+    padding-bottom: 15px;
+    border-radius: 15px;
+    border: 4px;
+    background-color: rgb(144, 222, 241);
+    opacity: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /*Элемент полностью прозрачный (невидимый)*/
+    transition: 1s;
+    /*Скорость перехода состояния элемента*/
+    animation: show 1s 1;
+    /* Указываем название анимации, её время и количество повторов*/
+    animation-fill-mode: forwards;
+    /* Чтобы элемент оставался в конечном состоянии анимации */
+    animation-delay: 0.2s;
+    /* Задержка перед началом */
+}
+
+@keyframes show {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes unshow {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.buttonStart {
+    width: 100px;
+    height: 50px;
+    border-radius: 20px;
+    margin-top: 10px;
+}
+
+#textStart {
+    padding-top: 35px;
+    font-size: 25px;
+}
+
+#mybtn {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    display: none;
+}
+
+#startbck{
+    display: none;
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    z-index: -1;
+}
